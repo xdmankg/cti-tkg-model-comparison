@@ -1,0 +1,15 @@
+{
+  "method_id": "R2",
+  "k": 2,
+  "rss": 194.6816415864808,
+  "ic": 106.03840694337877,
+  "parameter_count": 18,
+  "boundaries": [
+    5
+  ],
+  "model_definition": "FROZEN_STAGE13",
+  "selected_by_minimum_ic": false,
+  "practical_tie_threshold": 2.0,
+  "loto_rmse": 1.1669444126342483,
+  "loto_folds": 21
+}

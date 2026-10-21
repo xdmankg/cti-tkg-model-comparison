@@ -1,0 +1,20 @@
+{
+  "scanned_adopted_all": 14098,
+  "scanned_adopted_final": 14082,
+  "TP_YEAR_scanned": 6919,
+  "confirmed": 6,
+  "confirmed_rules": {
+    "TP_CVE_YEAR": 4,
+    "TP_YEAR": 2
+  },
+  "broad_contexts": 180,
+  "revised_final": 14076,
+  "changed_weight_rows": 5,
+  "changed_reports": 2,
+  "max_abs_weight_change": 1.0,
+  "changed_W_cells": 44970,
+  "max_abs_W_change": 0.0016065851758565175,
+  "weight_replay_error": 1.1102230246251565e-16,
+  "W_replay_error": 0.0,
+  "mu_R_recomputed": false
+}

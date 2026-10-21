@@ -1,0 +1,75 @@
+canonical_document_id,n_techniques,pair_potential,rank,percentile_rank,collection_channel,windows_assigned,primary_mass_sum,multi_event_document,first_core_year,last_core_year,source_filename,windows_assigned_rank,HIGH_TECHNIQUE_COUNT,MULTI_YEAR_HIGH_SPREAD,influence_flag
+CANON-9876eba64c73548d,128,8128,1,1.0,APT_CyberCriminal_Campagin_Collections,7,0.9999999999999998,True,2011,2020,Report2020CrowdStrikeGlobalThreatReport.pdf,69,True,False,HIGH_TECHNIQUE_COUNT
+CANON-59f1b14a3ff9354f,114,6441,2,0.9993215739484396,APTnotes,5,1.0,True,2019,2023,2023-11-09_Modern Asia APT groups TTPs.pdf,153,True,False,HIGH_TECHNIQUE_COUNT
+CANON-8d8edb6360b2f71d,104,5356,3,0.9986431478968792,APT_CyberCriminal_Campagin_Collections,1,1.0,False,2014,2014,201912_Report_Operation_Wacao.pdf,1282,True,False,HIGH_TECHNIQUE_COUNT
+CANON-e03ebe7af3504078,97,4656,4,0.9979647218453188,APT_CyberCriminal_Campagin_Collections,4,0.9545454545454544,True,2015,2018,Report2019GlobalThreatReport.pdf,347,True,False,HIGH_TECHNIQUE_COUNT
+CANON-63760f44e57b922d,86,3655,5,0.9972862957937584,APT_CyberCriminal_Campagin_Collections,3,0.9000000000000001,True,2017,2021,Report2021ThreatHunting.pdf,449,True,False,HIGH_TECHNIQUE_COUNT
+CANON-e789adf7a312471f,76,2850,6,0.996607869742198,APT_CyberCriminal_Campagin_Collections,9,0.8076923076923073,True,2012,2021,mtrends-2021.pdf,31,True,False,HIGH_TECHNIQUE_COUNT
+CANON-f2455bdcf1836afc,74,2701,7,0.9959294436906376,APT_CyberCriminal_Campagin_Collections,7,1.0,True,2005,2019,cta-2019-0206.pdf,77,True,False,HIGH_TECHNIQUE_COUNT
+CANON-79ad72125da2c956,65,2080,8,0.9952510176390772,APT_CyberCriminal_Campagin_Collections,4,0.9999999999999998,True,2014,2020,UNC215_ Spotlight on a Chinese Espionage Campaign in Israel _ FireEye Inc.pdf,285,True,False,HIGH_TECHNIQUE_COUNT
+CANON-fef3609f41e7904d,60,1770,9,0.994572591587517,APTnotes,1,1.0,False,2018,2018,2022-02-24_Iranian Government-Sponsored Actors Conduct Cyber Operations Against Global Government and Commercial Networks.pdf,1472,True,False,HIGH_TECHNIQUE_COUNT
+CANON-9217efdaa1a7cdfd,59,1711,10,0.9938941655359566,APT_CyberCriminal_Campagin_Collections,9,0.9166666666666664,True,2009,2018,report_APT41.pdf,29,True,False,HIGH_TECHNIQUE_COUNT
+CANON-d1c29f20fc6ec4f6,59,1711,11,0.9932157394843962,APTnotes,9,0.9166666666666664,True,2009,2018,2019-08-07_APT41_ A Dual Espionage and Cyber Crime Operation_2.pdf,30,True,False,HIGH_TECHNIQUE_COUNT
+CANON-e2ed4ac613f3b23f,46,1035,12,0.9925373134328358,APT_CyberCriminal_Campagin_Collections,5,0.8571428571428569,True,2011,2020,ESET_InvisiMole.pdf,212,True,False,HIGH_TECHNIQUE_COUNT
+CANON-946c60075e010a92,45,990,13,0.9918588873812756,APT_CyberCriminal_Campagin_Collections,7,0.9166666666666664,True,2008,2020,mtrends-2020.pdf,68,True,False,HIGH_TECHNIQUE_COUNT
+CANON-9d72c0a34b837157,43,903,14,0.991180461329715,APT_CyberCriminal_Campagin_Collections,3,0.75,True,2017,2019,research.nccgroup.com-Abusing cloud services to fly under the radar.pdf,507,True,False,HIGH_TECHNIQUE_COUNT
+CANON-b6aa6412294cdf30,43,903,15,0.9905020352781548,APT_CyberCriminal_Campagin_Collections,4,1.0,True,2017,2021,technical-brief-delving-deep-an-analysis-of-earth-lusca-operations.pdf,321,True,False,HIGH_TECHNIQUE_COUNT
+CANON-2d7d71c2f072c528,41,820,16,0.9898236092265944,APTnotes,3,0.8,True,2020,2022,"2023-12-01_New Tool Set Found Used Against Organizations in the Middle East, Africa and the US.pdf",400,True,False,HIGH_TECHNIQUE_COUNT
+CANON-cf031722ffa08180,41,820,17,0.989145183175034,APT_CyberCriminal_Campagin_Collections,3,1.0,True,2018,2020,More evil_ A deep look at Evilnum and its toolset _ WeLiveSecurity.pdf,563,True,False,HIGH_TECHNIQUE_COUNT
+CANON-b08925405f99641e,40,780,18,0.9884667571234736,APT_CyberCriminal_Campagin_Collections,3,1.0,True,2019,2021,Bitdefender-PR-Whitepaper-NAIKON-creat5397-en-EN.pdf,529,True,False,HIGH_TECHNIQUE_COUNT
+CANON-b8a7950e0ea2e40c,39,741,19,0.9877883310719132,APT_CyberCriminal_Campagin_Collections,3,1.0,True,2017,2020,ptsecurity.com-Higaisa or Winnti APT41 backdoors old and new.pdf,535,True,False,HIGH_TECHNIQUE_COUNT
+CANON-0125d8ecf108d7fa,34,561,20,0.9871099050203528,APT_CyberCriminal_Campagin_Collections,3,0.5714285714285713,True,2012,2023,Evasive Panda leverages Monlam Festival to target Tibetans.pdf,368,True,False,HIGH_TECHNIQUE_COUNT
+CANON-e4c4763672a224ad,34,561,21,0.9864314789687924,APT_CyberCriminal_Campagin_Collections,1,1.0,False,2019,2019,SectorJ04 Group’s Increased Activity in 2019.pdf,1423,False,False,
+CANON-2d9aeab952f49393,33,528,22,0.985753052917232,APT_CyberCriminal_Campagin_Collections,5,1.0,True,2013,2021,FIN13_ A Cybercriminal Threat Actor Focused on Mexico _ Mandiant.pdf,138,False,False,
+CANON-13486832b28b8a8b,32,496,23,0.9850746268656716,APT_CyberCriminal_Campagin_Collections,3,1.0,True,2018,2021,LazyScripter.pdf,379,False,False,
+CANON-37d9a289cd029343,32,496,24,0.9843962008141112,APT_CyberCriminal_Campagin_Collections,5,0.9999999999999998,True,2014,2021,Check Your Pulse_ Suspected APT Actors Leverage Authentication Bypass Techniques and Pulse Secure Zero-Day _ FireEye Inc.pdf,144,False,False,
+CANON-54f1a113ae41a2a1,31,465,25,0.9837177747625508,APTnotes,3,1.0,True,2018,2023,2023-12-13_Russian Foreign Intelligence Service (SVR) Exploiting JetBrains TeamCity CVE Globally.pdf,438,False,False,
+CANON-a7958915da89c588,31,465,26,0.9830393487109904,APT_CyberCriminal_Campagin_Collections,3,1.0,True,2008,2019,Operation-ENDTRADE-TICK-s-Multi-Stage-Backdoors-for-Attacking-Industries-and-Stealing-Classified-Data.pdf,519,False,False,
+CANON-4ad9a9e15327d48d,29,406,27,0.98236092265943,APTnotes,1,1.0,False,2021,2021,2022-02-23_UNC2596 Observed Leveraging Vulnerabilities to Deploy Cuba Ransomware.pdf,1162,False,False,
+CANON-7849da01528cb792,29,406,28,0.9816824966078698,APT_CyberCriminal_Campagin_Collections,1,1.0,False,2021,2021,(Ex)Change of Pace_ UNC2596 Observed Leveraging Vulnerabilities to Deploy Cuba Ransomware _ Mandiant.pdf,1247,False,False,
+CANON-e722f9852c93d84f,29,406,29,0.9810040705563092,APT_CyberCriminal_Campagin_Collections,2,1.0,True,2012,2020,UEFI threats moving to the ESP_ Introducing ESPecter bootkit _ WeLiveSecurity.pdf,995,False,False,
+CANON-047d4a9cc9e4feaa,28,378,30,0.980325644504749,APT_CyberCriminal_Campagin_Collections,2,1.0,True,2018,2020,TLP-WHITE_AA20-301A_North_Korean_APT_Focus_Kimsuky.pdf,622,False,False,
+CANON-3d24a24e90cb44fd,28,378,31,0.9796472184531886,APT_CyberCriminal_Campagin_Collections,3,1.0,True,2020,2022,"Mustang Panda’s Hodur_ Old tricks, new Korplug variant _ WeLiveSecurity.pdf",413,False,False,
+CANON-4cf6117e09c4d765,27,351,32,0.9789687924016284,APT_CyberCriminal_Campagin_Collections,2,1.0,True,2018,2020,welivesecurity.com-Operation Spalax Targeted malware attacks in Colombia.pdf,746,False,False,
+CANON-a92a0a0ae1522dae,27,351,33,0.9782903663500678,APT_CyberCriminal_Campagin_Collections,1,1.0,False,2020,2020,Lazarus Group Recruitment_ Threat Hunters vs Head Hunters.pdf,1328,False,False,
+CANON-a12a74f7cb26476c,25,300,34,0.9776119402985076,APT_CyberCriminal_Campagin_Collections,4,0.857142857142857,True,2012,2016,APT3_Adversary_Emulation_Plan.pdf,310,False,False,
+CANON-81e1231cf4c76289,23,253,35,0.9769335142469472,APT_CyberCriminal_Campagin_Collections,4,0.9999999999999998,True,2014,2019,MACHETE_JUST_GOT_SHARPER.pdf,289,False,False,
+CANON-c8c943ddf2f81b2c,23,253,36,0.9762550881953868,APT_CyberCriminal_Campagin_Collections,3,1.0,True,2016,2021,"APT31 new dropper. Target destinations_ Mongolia, Russia, the U.S., and elsewhere.pdf",554,False,False,
+CANON-0614efa61e81250c,22,231,37,0.9755766621438264,APT_CyberCriminal_Campagin_Collections,3,1.0,True,2010,2020,Investigation with a twist_ an accidental APT attack and averted data destruction.pdf,371,False,False,
+CANON-3ae30fca4fe64977,22,231,38,0.974898236092266,APT_CyberCriminal_Campagin_Collections,8,0.9999999999999996,True,2007,2021,2021-Threat-Detection-Report.pdf,40,False,False,
+CANON-a5342a348b1ca839,22,231,39,0.9742198100407056,APT_CyberCriminal_Campagin_Collections,6,1.0,True,2014,2020,Dream-Job-Campaign.pdf,112,False,False,
+CANON-be5e5a70ad1593cf,22,231,40,0.9735413839891452,APT_CyberCriminal_Campagin_Collections,1,0.5,False,2009,2009,CSA_TTPs-of-Indicted-APT40-Actors-Associated-with-China-MSS-Hainan-State-Security-Department.pdf,1367,False,False,
+CANON-fb8c24c7cfbe49c4,22,231,41,0.9728629579375848,APTnotes,2,1.0,True,2020,2021,2022-02-15_Guard Your Drive from DriveGuard_ Moses Staff Campaigns Against Israeli Organizations Span Several Months.pdf,1018,False,False,
+CANON-1b85703d63d752a1,21,210,42,0.9721845318860244,APT_CyberCriminal_Campagin_Collections,4,1.0,True,2016,2019,Operation_Kitty_Phishing.pdf,231,False,False,
+CANON-4d93ceb8cd8f0bbe,21,210,43,0.971506105834464,APT_CyberCriminal_Campagin_Collections,3,1.0,True,2013,2019,ESET_Attor.pdf,428,False,False,
+CANON-6406e7563a0bb426,21,210,44,0.9708276797829036,APT_CyberCriminal_Campagin_Collections,3,0.8,True,2015,2020,Turla Crutch_ Keeping the “back door” open _ WeLiveSecurity.pdf,451,False,False,
+CANON-a69dd5a93283b585,21,210,45,0.9701492537313432,APT_CyberCriminal_Campagin_Collections,6,0.9333333333333328,True,2014,2023,watchtower-2023-eoy-report-en.pdf,114,False,False,
+CANON-cc8f69228582a200,21,210,46,0.9694708276797828,APTnotes,1,1.0,False,2021,2021,"2022-04-28_LAPSUS$_ Recent techniques, tactics and procedures.pdf",1383,False,False,
+CANON-0b8e23bda20f8938,20,190,47,0.9687924016282226,APT_CyberCriminal_Campagin_Collections,3,0.75,True,2017,2020,2020.09.29_ShadowPad - new activity from the Winnti group.pdf,374,False,False,
+CANON-41a2d6e765a3a562,20,190,48,0.968113975576662,APT_CyberCriminal_Campagin_Collections,1,1.0,False,2020,2020,unit42.paloaltonetworks.com-xHunt Campaign New BumbleBee Webshell and SSH Tunnels Used for Lateral Movement.pdf,1144,False,False,
+CANON-45cf5dff921103e3,20,190,49,0.9674355495251018,APT_CyberCriminal_Campagin_Collections,2,1.0,True,2013,2020,Gamaredon group grows its game _ WeLiveSecurity.pdf,733,False,False,
+CANON-54401ca689174c6f,20,190,50,0.9667571234735414,APT_CyberCriminal_Campagin_Collections,1,1.0,False,2020,2020,xHunt Campaign_ New BumbleBee Webshell and SSH Tunnels Used for Lateral Movement.pdf,1187,False,False,
+CANON-d886eb748fe17592,20,190,51,0.966078697421981,APT_CyberCriminal_Campagin_Collections,2,1.0,True,2016,2020,"Hungry for data, ModPipe backdoor hits POS software used in hospitality sector _ WeLiveSecurity.pdf",974,False,False,
+CANON-f2869e75be09cb45,20,190,52,0.9654002713704206,APT_CyberCriminal_Campagin_Collections,3,1.0,True,2013,2019,"ESET discovers Attor, a spy platform with curious GSM fingerprinting _ WeLiveSecurity.pdf",604,False,False,
+CANON-83fe2609899a13a3,19,171,53,0.9647218453188604,APT_CyberCriminal_Campagin_Collections,1,0.5,False,2018,2018,A journey to Zebrocy land.pdf,1268,False,False,
+CANON-a3d7997d10a45f85,19,171,54,0.9640434192673,APT_CyberCriminal_Campagin_Collections,2,1.0,True,2016,2019,ESET_Operation_Interception.pdf,887,False,False,
+CANON-b96313451a444ea5,19,171,55,0.9633649932157397,APT_CyberCriminal_Campagin_Collections,4,1.0,True,2015,2021,Operation ‘Harvest’_ A Deep Dive into a Long-term Campaign _ McAfee Blogs.pdf,322,False,False,
+CANON-f5463dd2df260001,19,171,56,0.9626865671641792,APT_CyberCriminal_Campagin_Collections,2,1.0,True,2019,2021,FamousSparrow_ A suspicious hotel guest _ WeLiveSecurity.pdf,1011,False,False,
+CANON-018e393893a134a0,18,153,57,0.9620081411126188,APT_CyberCriminal_Campagin_Collections,8,0.8636363636363633,True,2010,2019,ESET_Okrum_and_Ketrican.pdf,34,False,False,
+CANON-13e578cf695fd078,18,153,58,0.9613297150610584,APT_CyberCriminal_Campagin_Collections,3,1.0,True,2016,2019,"In the Balkans, businesses are under fire from a double‑barreled weapon.pdf",381,False,False,
+CANON-40b0705000abf1d6,18,153,59,0.960651289009498,APT_CyberCriminal_Campagin_Collections,8,0.8571428571428568,True,2008,2019,ESET_Operation_Ghost_Dukes.pdf,41,False,False,
+CANON-a3059d85ffc003eb,18,153,60,0.9599728629579376,APT_CyberCriminal_Campagin_Collections,3,0.9795918367346936,True,2009,2021,CERTFR-2021-CTI-009.pdf,516,False,False,
+CANON-abd41bc4efd36f90,18,153,61,0.9592944369063772,APT_CyberCriminal_Campagin_Collections,1,1.0,False,2019,2019,Guildma_ The Devil drives electric _ WeLiveSecurity.pdf,1336,False,False,
+CANON-e6155a2637946556,18,153,62,0.9586160108548168,APTnotes,2,1.0,True,2020,2022,2023-03-02_MQsTTang_ Mustang Panda's latest backdoor treads new ground with Qt and MQTT.pdf,994,False,False,
+CANON-86e036010b2a66eb,17,136,63,0.9579375848032564,APT_CyberCriminal_Campagin_Collections,7,1.0,True,2007,2020,ESET_Turla_ComRAT.pdf,63,False,False,
+CANON-91184f83c6910d79,17,136,64,0.957259158751696,APT_CyberCriminal_Campagin_Collections,2,1.0,True,2017,2018,SharpPanda_ Chinese APT Group Targets Southeast Asian Government With Previously Unknown Backdoor - Check Point Research.pdf,845,False,False,
+CANON-934b16c0db009d9e,17,136,65,0.9565807327001355,APT_CyberCriminal_Campagin_Collections,2,1.0,True,2018,2020,Prevailion Blog_ Phantom in the Command Shell.pdf,851,False,False,
+CANON-c4a684b791912370,17,136,66,0.9559023066485752,APTnotes,1,1.0,False,2021,2021,2022-03-21_APT35 Automates Initial Access Using ProxyShell.pdf,1374,False,False,
+CANON-70d19d67da772d43,16,120,67,0.9552238805970148,APTnotes,2,0.6666666666666666,True,2020,2021,2021-08-24_APT41 Resurfaces as Earth Baku With New Cyberespionage Campaign.pdf,790,False,False,
+CANON-d08d8acf911c805b,16,120,68,0.9545454545454546,APT_CyberCriminal_Campagin_Collections,8,0.857142857142857,True,2005,2018,ENISA_Threat_Landscape_2018.pdf,50,False,False,
+CANON-e12b1c742bd528d2,16,120,69,0.9538670284938942,APT_CyberCriminal_Campagin_Collections,11,0.9999999999999992,True,2007,2019,Lexfo-WhitePaper-The_Lazarus_Constellation.pdf,12,False,True,
+CANON-ffe8bdc647be8835,16,120,70,0.9531886024423338,APT_CyberCriminal_Campagin_Collections,4,1.0,True,2016,2020,pov-2020-1230.pdf,366,False,False,
+CANON-18b6a9bf786b88fe,15,105,71,0.9525101763907734,APT_CyberCriminal_Campagin_Collections,3,0.9999999999999998,True,2010,2020,kaspersky-ics-cert-lazarus-targets-defense-industry-with-threatneedle-en-20210225.pdf,385,False,False,
+CANON-2bffe570676228ab,15,105,72,0.9518317503392132,APT_CyberCriminal_Campagin_Collections,4,0.8333333333333331,True,2012,2020,2020.10.15_Operation_Quicksand_MuddyWater’s_Offensive_Attack_Against_Israeli.pdf,246,False,False,
+CANON-9733cab3669838e7,15,105,73,0.9511533242876526,APT_CyberCriminal_Campagin_Collections,5,1.0,True,2007,2020,ClearSky-Fox-Kitten-Campaign-v1.pdf,180,False,False,
+CANON-b14885f36d6af45f,15,105,74,0.9504748982360922,APT_CyberCriminal_Campagin_Collections,4,1.0,True,2020,2023,apt41-arisen-from-dust.pdf,316,False,False,

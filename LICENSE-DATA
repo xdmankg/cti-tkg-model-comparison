@@ -1,0 +1,16 @@
+Data, numerical results, figures and documentation in this repository that were
+created by the authors (HyoungJu Kim and Junho Choi) are licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0).
+Full text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+This license applies to the files under data/, results/, figures/ and docs/
+except as noted below.
+
+Third-party content
+- MITRE ATT&CK (Enterprise v19.2) technique identifiers and names are used under
+  the MITRE ATT&CK Terms of Use (https://attack.mitre.org/resources/terms-of-use/).
+- Original CTI reports from APTnotes and the CyberMonitor APT & CyberCriminal
+  Campaign Collection are not redistributed. Only report identifiers, source
+  references and passage locations are provided.
+
+Code under scripts/ is licensed separately under the MIT License (see LICENSE).

@@ -1,0 +1,73 @@
+{
+  "experiment_id": "15E02",
+  "execution_id": "15E02-01",
+  "scope": "AUTHORITATIVE_CONSTRUCTION_NOT_FINAL_FREEZE",
+  "selected_method": "RCD1_MICROCANONICAL_POSITIVE_EXCESS",
+  "selected_null": "N1_STRATIFIED_MICROCANONICAL",
+  "residual_formula": "max(0,W_obs-mu_null)",
+  "construction_seed": 20260815,
+  "validation_seed": 2026081502,
+  "bootstrap_seed": 2026081503,
+  "float_tolerance": 1e-10,
+  "construction_null": {
+    "draws_per_window": 400,
+    "chains": 2,
+    "draws_per_chain": 200,
+    "calibration_draws": 200,
+    "heldout_draws": 200,
+    "burn_in": "max(100,10*n_documents)",
+    "thinning": "max(10,2*n_documents)"
+  },
+  "validation_null": {
+    "draws_per_window": 200,
+    "chains": 2,
+    "draws_per_chain": 100,
+    "pseudo_sequences": 200,
+    "burn_in": "max(100,10*n_documents)",
+    "thinning": "max(10,2*n_documents)"
+  },
+  "mixing_thresholds": {
+    "chain_mean_cosine_min": 0.98,
+    "first_second_mean_cosine_min": 0.98,
+    "normalized_mean_rmse_max": 0.25,
+    "variance_relative_difference_max": 0.5
+  },
+  "descriptor": {
+    "id": "COMPOSITION_ADJUSTED_EVOLUTION_DESCRIPTOR_V1",
+    "dimensions": [
+      "component_share_birth",
+      "component_share_death",
+      "component_share_increase",
+      "support_share_low",
+      "support_share_medium",
+      "rms_low",
+      "rms_medium",
+      "rms_high",
+      "persistent_relation_rms"
+    ],
+    "scaling": "median_and_1.4826_MAD",
+    "active_epsilon": 1e-15,
+    "support_context": "FROZEN_OBSERVED_BINARY_DOCUMENT_SUPPORT"
+  },
+  "models": {
+    "R0": "constant",
+    "R1": "degree_1_tau_linspace_minus1_plus1",
+    "R2": "contiguous_piecewise_constant_k2_or_k3_min_segment5",
+    "ic": "nobs*log((rss+1e-12)/nobs)+parameters*log(nobs)+2*boundaries*log(21)",
+    "practical_tie_abs_delta_ic": 2.0
+  },
+  "primary_temporal_specificity": {
+    "statistic": "T12=IC_R1-IC_R2",
+    "p": "(1+count(T12_null<=T12_obs))/(B+1)",
+    "supported_max": 0.05,
+    "borderline_max": 0.1
+  },
+  "bootstrap_replicates": 10000,
+  "method_reselection": false,
+  "p_thresholding": false,
+  "fdr": false,
+  "year_deletion": false,
+  "coverage_thresholding": false,
+  "graph_specific_drift_confirmed": false,
+  "stage15_final_freeze": false
+}

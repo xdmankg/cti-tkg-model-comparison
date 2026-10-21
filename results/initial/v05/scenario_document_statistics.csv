@@ -1,0 +1,4 @@
+﻿scenario,documents,removed_documents,document_year_memberships,effective_mass,unique_techniques
+S0_FULL,1474,0,4060,1429.1969719953163,449
+S1_DROP_TOP1,1459,15,3982,1415.1775913759357,383
+S2_DROP_TOP5,1400,74,3788,1359.408172699374,260

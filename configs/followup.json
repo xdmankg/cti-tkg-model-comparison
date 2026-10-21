@@ -1,0 +1,189 @@
+{
+  "experiment_id": "V07-01",
+  "execution_label": "numerical-and-inference-robustness",
+  "configuration_locked_before_new_results": true,
+  "post_hoc_followup_to_known_instability": true,
+  "master_seed": 2026090601,
+  "years": [
+    2002,
+    2023
+  ],
+  "annual_snapshots": 22,
+  "transitions": 21,
+  "feature_dimension": 28195,
+  "descriptors": [
+    "component_share_birth",
+    "component_share_death",
+    "component_share_increase",
+    "support_share_low",
+    "support_share_medium",
+    "rms_low",
+    "rms_medium",
+    "rms_high",
+    "persistent_relation_rms"
+  ],
+  "scenarios": [
+    "S0_FULL",
+    "S1_DROP_TOP1",
+    "S2_DROP_TOP5"
+  ],
+  "replicate_ids": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "seed_slots": [
+    0,
+    1,
+    2
+  ],
+  "chain_ids": [
+    0,
+    1
+  ],
+  "levels": {
+    "L0_STAGE15_MATCHED": {
+      "seed_slots": [
+        0
+      ],
+      "chains": [
+        0,
+        1
+      ],
+      "draws_per_chain_for_mu": 100,
+      "N_mu": 200,
+      "N_generated_for_diagnostics": 400
+    },
+    "L1_EXTENDED": {
+      "seed_slots": [
+        0,
+        1,
+        2
+      ],
+      "chains": [
+        0,
+        1
+      ],
+      "draws_per_chain_for_mu": 400,
+      "N_mu": 2400
+    },
+    "L2_HIGH": {
+      "seed_slots": [
+        0,
+        1,
+        2
+      ],
+      "chains": [
+        0,
+        1
+      ],
+      "draws_per_chain_for_mu": 1600,
+      "N_mu": 9600
+    }
+  },
+  "checkpoint_draws": [
+    100,
+    200,
+    400,
+    800,
+    1600
+  ],
+  "checkpoint_800_role": "internal first/second-half mixing diagnostic for L2; not an additional analysis level",
+  "burn_in_rule": "per eligible document-year weight stratum: max(100,10*len(indices))",
+  "between_draw_rule": "per eligible document-year weight stratum: max(10,2*len(indices))",
+  "residual_definition": "R=max(0,W_obs-mu_null)",
+  "relation_presence_definition": "R>0",
+  "density_scope": {
+    "primary": "B0_REFERENCE",
+    "secondary": "B2_COMMON_NODE_EQUAL_DENSITY",
+    "q_B2": 0.03903903903903904,
+    "multipliers": [
+      1.0,
+      0.75,
+      0.5
+    ],
+    "q_reestimation_allowed": false
+  },
+  "model_selection": {
+    "models": [
+      "R0",
+      "R1",
+      "R2"
+    ],
+    "candidate_set_rule": "IC_m-min_k(IC_k)<=2.0+1e-12",
+    "threshold": 2.0,
+    "numerical_tolerance": 1e-12,
+    "T12": "IC_R1-IC_R2",
+    "pairwise_R1_R2_tie_rule": "abs(T12)<=2.0",
+    "candidate_set_and_pairwise_tie_are_distinct": true
+  },
+  "float_comparison": {
+    "atol": 1e-08,
+    "rtol": 1e-08
+  },
+  "loto_conditions": [
+    {
+      "id": "LEGACY_GLOBAL_LOTO",
+      "scaling": "global_21_transition_median_MAD",
+      "gap_h": 0
+    },
+    {
+      "id": "FOLD_LOCAL_LOTO",
+      "scaling": "training_only_median_MAD",
+      "gap_h": 0
+    },
+    {
+      "id": "FOLD_LOCAL_GAP1",
+      "scaling": "training_only_median_MAD",
+      "gap_h": 1
+    }
+  ],
+  "robust_scale": {
+    "multiplier": 1.4826,
+    "epsilon": 1e-12,
+    "fallback_scale": 1.0
+  },
+  "conditional_bootstrap": {
+    "B": 10000,
+    "tail": "upper",
+    "multipliers": [
+      "LEGACY_RADEMACHER",
+      "GAUSSIAN_L1",
+      "DWB_L2",
+      "DWB_L3",
+      "DWB_L4"
+    ],
+    "primary": "DWB_L3",
+    "tests": [
+      "TIME_GIVEN_COVERAGE",
+      "COVERAGE_GIVEN_TIME"
+    ],
+    "holm_within_dataset_multiplier": true
+  },
+  "loto_block_bootstrap": {
+    "B": 10000,
+    "methods": [
+      "IID_TRANSITION",
+      "MOVING_BLOCK_L2",
+      "MOVING_BLOCK_L3",
+      "MOVING_BLOCK_L4"
+    ],
+    "primary": "MOVING_BLOCK_L3",
+    "circular": false,
+    "comparisons": [
+      "R1_MINUS_R0",
+      "R1_MINUS_R2"
+    ]
+  },
+  "new_T12_p_value": "NOT_REESTIMATED_IN_THIS_PROTOCOL",
+  "max_draws_per_chain": 1600,
+  "planned_mc_draws": 3168000,
+  "planned_B0_results": 45,
+  "planned_B2_results": 135,
+  "upstream_read_only": true,
+  "existing_freezes_replacement_allowed": false,
+  "manuscript_direct_edit_allowed": false,
+  "v07_02_execution_allowed": false
+}

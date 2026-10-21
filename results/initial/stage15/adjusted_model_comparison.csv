@@ -1,0 +1,4 @@
+﻿method_id,rss,ic,parameter_count,boundaries_json,best_ic,R0_R1_practical_tie,R1_R2_practical_tie,R0_R2_practical_tie
+R0,289.93463313051774,128.05042576398375,9,[],False,False,True,False
+R1,199.1401616312623,104.22894377333606,18,[],True,False,True,False
+R2,194.6816415864808,106.03840694337877,18,[5],False,False,True,False

@@ -1,0 +1,123 @@
+check_id,actual,expected,tolerance,status
+canonical_reports,1856,1856,0,PASS
+final_reports,1474,1474,0,PASS
+mapping_evidence,9550,9550,0,PASS
+quarantined_mapping_evidence,313,313,0,PASS
+eligible_final_evidence,8622,8622,0,PASS
+final_links,4852,4852,0,PASS
+techniques,449,449,0,PASS
+time_all,14252,14252,0,PASS
+time_final,14236,14236,0,PASS
+weight_rows,4060,4060,0,PASS
+weight_reports_match,True,True,0,PASS
+original_weights_links_to_W_max_error,2.7755575615628914e-17,0,1e-12,PASS
+original_weights_links_to_support_max_error,0.0,0,0,PASS
+foundation_file_count,15,15,0,PASS
+S0_FULL_replicate_0:shape,"(22, 28195)","(22, 28195)",0,PASS
+S0_FULL_replicate_0:finite,True,True,0,PASS
+S0_FULL_replicate_0:L0_STAGE15_MATCHED:residual,0.0,0,1e-14,PASS
+S0_FULL_replicate_0:L1_EXTENDED:residual,0.0,0,1e-14,PASS
+S0_FULL_replicate_0:L2_HIGH:residual,0.0,0,1e-14,PASS
+S0_FULL_replicate_0:W_same_across_bundles,0.0,0,0,PASS
+S0_FULL_replicate_1:shape,"(22, 28195)","(22, 28195)",0,PASS
+S0_FULL_replicate_1:finite,True,True,0,PASS
+S0_FULL_replicate_1:L0_STAGE15_MATCHED:residual,0.0,0,1e-14,PASS
+S0_FULL_replicate_1:L1_EXTENDED:residual,0.0,0,1e-14,PASS
+S0_FULL_replicate_1:L2_HIGH:residual,0.0,0,1e-14,PASS
+S0_FULL_replicate_1:W_same_across_bundles,0.0,0,0,PASS
+S0_FULL_replicate_2:shape,"(22, 28195)","(22, 28195)",0,PASS
+S0_FULL_replicate_2:finite,True,True,0,PASS
+S0_FULL_replicate_2:L0_STAGE15_MATCHED:residual,0.0,0,1e-14,PASS
+S0_FULL_replicate_2:L1_EXTENDED:residual,0.0,0,1e-14,PASS
+S0_FULL_replicate_2:L2_HIGH:residual,0.0,0,1e-14,PASS
+S0_FULL_replicate_2:W_same_across_bundles,0.0,0,0,PASS
+S0_FULL_replicate_3:shape,"(22, 28195)","(22, 28195)",0,PASS
+S0_FULL_replicate_3:finite,True,True,0,PASS
+S0_FULL_replicate_3:L0_STAGE15_MATCHED:residual,0.0,0,1e-14,PASS
+S0_FULL_replicate_3:L1_EXTENDED:residual,0.0,0,1e-14,PASS
+S0_FULL_replicate_3:L2_HIGH:residual,0.0,0,1e-14,PASS
+S0_FULL_replicate_3:W_same_across_bundles,0.0,0,0,PASS
+S0_FULL_replicate_4:shape,"(22, 28195)","(22, 28195)",0,PASS
+S0_FULL_replicate_4:finite,True,True,0,PASS
+S0_FULL_replicate_4:L0_STAGE15_MATCHED:residual,0.0,0,1e-14,PASS
+S0_FULL_replicate_4:L1_EXTENDED:residual,0.0,0,1e-14,PASS
+S0_FULL_replicate_4:L2_HIGH:residual,0.0,0,1e-14,PASS
+S0_FULL_replicate_4:W_same_across_bundles,0.0,0,0,PASS
+S1_DROP_TOP1_replicate_0:shape,"(22, 28195)","(22, 28195)",0,PASS
+S1_DROP_TOP1_replicate_0:finite,True,True,0,PASS
+S1_DROP_TOP1_replicate_0:L0_STAGE15_MATCHED:residual,0.0,0,1e-14,PASS
+S1_DROP_TOP1_replicate_0:L1_EXTENDED:residual,0.0,0,1e-14,PASS
+S1_DROP_TOP1_replicate_0:L2_HIGH:residual,0.0,0,1e-14,PASS
+S1_DROP_TOP1_replicate_0:W_same_across_bundles,0.0,0,0,PASS
+S1_DROP_TOP1_replicate_1:shape,"(22, 28195)","(22, 28195)",0,PASS
+S1_DROP_TOP1_replicate_1:finite,True,True,0,PASS
+S1_DROP_TOP1_replicate_1:L0_STAGE15_MATCHED:residual,0.0,0,1e-14,PASS
+S1_DROP_TOP1_replicate_1:L1_EXTENDED:residual,0.0,0,1e-14,PASS
+S1_DROP_TOP1_replicate_1:L2_HIGH:residual,0.0,0,1e-14,PASS
+S1_DROP_TOP1_replicate_1:W_same_across_bundles,0.0,0,0,PASS
+S1_DROP_TOP1_replicate_2:shape,"(22, 28195)","(22, 28195)",0,PASS
+S1_DROP_TOP1_replicate_2:finite,True,True,0,PASS
+S1_DROP_TOP1_replicate_2:L0_STAGE15_MATCHED:residual,0.0,0,1e-14,PASS
+S1_DROP_TOP1_replicate_2:L1_EXTENDED:residual,0.0,0,1e-14,PASS
+S1_DROP_TOP1_replicate_2:L2_HIGH:residual,0.0,0,1e-14,PASS
+S1_DROP_TOP1_replicate_2:W_same_across_bundles,0.0,0,0,PASS
+S1_DROP_TOP1_replicate_3:shape,"(22, 28195)","(22, 28195)",0,PASS
+S1_DROP_TOP1_replicate_3:finite,True,True,0,PASS
+S1_DROP_TOP1_replicate_3:L0_STAGE15_MATCHED:residual,0.0,0,1e-14,PASS
+S1_DROP_TOP1_replicate_3:L1_EXTENDED:residual,0.0,0,1e-14,PASS
+S1_DROP_TOP1_replicate_3:L2_HIGH:residual,0.0,0,1e-14,PASS
+S1_DROP_TOP1_replicate_3:W_same_across_bundles,0.0,0,0,PASS
+S1_DROP_TOP1_replicate_4:shape,"(22, 28195)","(22, 28195)",0,PASS
+S1_DROP_TOP1_replicate_4:finite,True,True,0,PASS
+S1_DROP_TOP1_replicate_4:L0_STAGE15_MATCHED:residual,0.0,0,1e-14,PASS
+S1_DROP_TOP1_replicate_4:L1_EXTENDED:residual,0.0,0,1e-14,PASS
+S1_DROP_TOP1_replicate_4:L2_HIGH:residual,0.0,0,1e-14,PASS
+S1_DROP_TOP1_replicate_4:W_same_across_bundles,0.0,0,0,PASS
+S2_DROP_TOP5_replicate_0:shape,"(22, 28195)","(22, 28195)",0,PASS
+S2_DROP_TOP5_replicate_0:finite,True,True,0,PASS
+S2_DROP_TOP5_replicate_0:L0_STAGE15_MATCHED:residual,0.0,0,1e-14,PASS
+S2_DROP_TOP5_replicate_0:L1_EXTENDED:residual,0.0,0,1e-14,PASS
+S2_DROP_TOP5_replicate_0:L2_HIGH:residual,0.0,0,1e-14,PASS
+S2_DROP_TOP5_replicate_0:W_same_across_bundles,0.0,0,0,PASS
+S2_DROP_TOP5_replicate_1:shape,"(22, 28195)","(22, 28195)",0,PASS
+S2_DROP_TOP5_replicate_1:finite,True,True,0,PASS
+S2_DROP_TOP5_replicate_1:L0_STAGE15_MATCHED:residual,0.0,0,1e-14,PASS
+S2_DROP_TOP5_replicate_1:L1_EXTENDED:residual,0.0,0,1e-14,PASS
+S2_DROP_TOP5_replicate_1:L2_HIGH:residual,0.0,0,1e-14,PASS
+S2_DROP_TOP5_replicate_1:W_same_across_bundles,0.0,0,0,PASS
+S2_DROP_TOP5_replicate_2:shape,"(22, 28195)","(22, 28195)",0,PASS
+S2_DROP_TOP5_replicate_2:finite,True,True,0,PASS
+S2_DROP_TOP5_replicate_2:L0_STAGE15_MATCHED:residual,0.0,0,1e-14,PASS
+S2_DROP_TOP5_replicate_2:L1_EXTENDED:residual,0.0,0,1e-14,PASS
+S2_DROP_TOP5_replicate_2:L2_HIGH:residual,0.0,0,1e-14,PASS
+S2_DROP_TOP5_replicate_2:W_same_across_bundles,0.0,0,0,PASS
+S2_DROP_TOP5_replicate_3:shape,"(22, 28195)","(22, 28195)",0,PASS
+S2_DROP_TOP5_replicate_3:finite,True,True,0,PASS
+S2_DROP_TOP5_replicate_3:L0_STAGE15_MATCHED:residual,0.0,0,1e-14,PASS
+S2_DROP_TOP5_replicate_3:L1_EXTENDED:residual,0.0,0,1e-14,PASS
+S2_DROP_TOP5_replicate_3:L2_HIGH:residual,0.0,0,1e-14,PASS
+S2_DROP_TOP5_replicate_3:W_same_across_bundles,0.0,0,0,PASS
+S2_DROP_TOP5_replicate_4:shape,"(22, 28195)","(22, 28195)",0,PASS
+S2_DROP_TOP5_replicate_4:finite,True,True,0,PASS
+S2_DROP_TOP5_replicate_4:L0_STAGE15_MATCHED:residual,0.0,0,1e-14,PASS
+S2_DROP_TOP5_replicate_4:L1_EXTENDED:residual,0.0,0,1e-14,PASS
+S2_DROP_TOP5_replicate_4:L2_HIGH:residual,0.0,0,1e-14,PASS
+S2_DROP_TOP5_replicate_4:W_same_across_bundles,0.0,0,0,PASS
+initial_W_matches_followup_W,0.0,0,0,PASS
+initial_residual_identity,0.0,0,1e-14,PASS
+corrected_R2_n,49,49,0,PASS
+corrected_R2_n_decrease,18,18,0,PASS
+corrected_R2_n_equal,20,20,0,PASS
+corrected_R2_n_increase,11,11,0,PASS
+ranking_scope_match,True,True,0,PASS
+pair_potential_formula,0.0,0,0,PASS
+potential_total,66325,66325,0,PASS
+top74_share_percent,92.71918582736525,92.72,0.005,PASS
+results/time_revision/v3_1/hold_both_time_assignments:final_count,14082,14082,0,PASS
+results/time_revision/v3_1/hold_both_time_assignments:outside_count,16,16,0,PASS
+results/time_revision/v3_1/hold_both_time_assignments:candidate_match,True,True,0,PASS
+results/time_revision/residual_six/revised_time_assignments:final_count,14076,14076,0,PASS
+results/time_revision/residual_six/revised_time_assignments:outside_count,16,16,0,PASS
+results/time_revision/residual_six/revised_time_assignments:candidate_match,True,True,0,PASS
+seed_count,1980,1980,0,PASS
+seed_derivation,True,True,0,PASS

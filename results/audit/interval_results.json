@@ -1,0 +1,189 @@
+{
+  "A": {
+    "population_N": 8622,
+    "n": 200,
+    "strata": {
+      "A:P2_DIRECT_EXACT_CANONICAL_NAME": {
+        "N": 6161,
+        "n": 80,
+        "correct": 59,
+        "incorrect": 21,
+        "undecidable": 0,
+        "confirmed_fraction": 0.7375,
+        "possible_fraction": 0.7375,
+        "simultaneous_interval": [
+          0.5981171887680571,
+          0.8493751014445707
+        ],
+        "individual_95_interval": [
+          0.6279824703781853,
+          0.8289238759941568
+        ]
+      },
+      "A:P2_DIRECT_EXPLICIT_EXTERNAL_ID": {
+        "N": 2263,
+        "n": 50,
+        "correct": 41,
+        "incorrect": 9,
+        "undecidable": 0,
+        "confirmed_fraction": 0.82,
+        "possible_fraction": 0.82,
+        "simultaneous_interval": [
+          0.6504639858594786,
+          0.9306230667255855
+        ],
+        "individual_95_interval": [
+          0.6871409633230225,
+          0.9133893062306673
+        ]
+      },
+      "A:P2_DIRECT_UNIQUE_BEHAVIOR_LEXICON": {
+        "N": 87,
+        "n": 35,
+        "correct": 31,
+        "incorrect": 4,
+        "undecidable": 0,
+        "confirmed_fraction": 0.8857142857142857,
+        "possible_fraction": 0.8857142857142857,
+        "simultaneous_interval": [
+          0.735632183908046,
+          0.9540229885057471
+        ],
+        "individual_95_interval": [
+          0.7701149425287356,
+          0.9425287356321839
+        ]
+      },
+      "A:P2_DIRECT_UNIQUE_NORMALIZED_NAME": {
+        "N": 111,
+        "n": 35,
+        "correct": 25,
+        "incorrect": 10,
+        "undecidable": 0,
+        "confirmed_fraction": 0.7142857142857143,
+        "possible_fraction": 0.7142857142857143,
+        "simultaneous_interval": [
+          0.5315315315315315,
+          0.8468468468468469
+        ],
+        "individual_95_interval": [
+          0.5675675675675675,
+          0.8288288288288288
+        ]
+      }
+    },
+    "weighted_estimate": 0.7603503081817278,
+    "weighted_identification_bounds": [
+      0.7603503081817278,
+      0.7603503081817278
+    ],
+    "conservative_95_interval": [
+      0.6123869171885873,
+      0.8717234980282997
+    ],
+    "point_estimate_method": "sum of stratum population weights times stratum proportions; only when no undecidable",
+    "interval_method": "hypergeometric inversion; Bonferroni across strata; undecidable sensitivity bounds; finite-frame SRSWOR only"
+  },
+  "C": {
+    "population_N": 14236,
+    "n": 100,
+    "strata": {
+      "C:TP_CVE_YEAR": {
+        "N": 85,
+        "n": 15,
+        "correct": 0,
+        "incorrect": 15,
+        "undecidable": 0,
+        "confirmed_fraction": 0.0,
+        "possible_fraction": 0.0,
+        "simultaneous_interval": [
+          0.0,
+          0.27058823529411763
+        ],
+        "individual_95_interval": [
+          0.0,
+          0.18823529411764706
+        ]
+      },
+      "C:TP_DAY": {
+        "N": 2898,
+        "n": 20,
+        "correct": 11,
+        "incorrect": 9,
+        "undecidable": 0,
+        "confirmed_fraction": 0.55,
+        "possible_fraction": 0.55,
+        "simultaneous_interval": [
+          0.2584541062801932,
+          0.8184955141476881
+        ],
+        "individual_95_interval": [
+          0.31608005521049,
+          0.7684610075914424
+        ]
+      },
+      "C:TP_MONTH": {
+        "N": 3822,
+        "n": 20,
+        "correct": 15,
+        "incorrect": 5,
+        "undecidable": 0,
+        "confirmed_fraction": 0.75,
+        "possible_fraction": 0.75,
+        "simultaneous_interval": [
+          0.4411302982731554,
+          0.9411302982731554
+        ],
+        "individual_95_interval": [
+          0.5096807953950812,
+          0.9128728414442701
+        ]
+      },
+      "C:TP_RANGE": {
+        "N": 514,
+        "n": 20,
+        "correct": 20,
+        "incorrect": 0,
+        "undecidable": 0,
+        "confirmed_fraction": 1.0,
+        "possible_fraction": 1.0,
+        "simultaneous_interval": [
+          0.7723735408560312,
+          1.0
+        ],
+        "individual_95_interval": [
+          0.8365758754863813,
+          1.0
+        ]
+      },
+      "C:TP_YEAR": {
+        "N": 6917,
+        "n": 25,
+        "correct": 15,
+        "incorrect": 10,
+        "undecidable": 0,
+        "confirmed_fraction": 0.6,
+        "possible_fraction": 0.6,
+        "simultaneous_interval": [
+          0.33034552551684254,
+          0.8317189533034552
+        ],
+        "individual_95_interval": [
+          0.38701749313286105,
+          0.788347549515686
+        ]
+      }
+    },
+    "weighted_estimate": 0.6409525147513346,
+    "weighted_identification_bounds": [
+      0.6409525147513346,
+      0.6409525147513346
+    ],
+    "conservative_95_interval": [
+      0.35944085417252036,
+      0.8611267209890419
+    ],
+    "point_estimate_method": "sum of stratum population weights times stratum proportions; only when no undecidable",
+    "interval_method": "hypergeometric inversion; Bonferroni across strata; undecidable sensitivity bounds; finite-frame SRSWOR only"
+  }
+}

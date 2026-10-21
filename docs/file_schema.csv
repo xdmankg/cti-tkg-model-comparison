@@ -1,0 +1,67 @@
+path,rows,columns
+data/canonical_documents.csv,1856,canonical_document_id; representative_raw_document_id; member_count; representative_content_sha256; source_datasets_json; included_in_analytical_corpus
+data/document_techniques.csv,4852,canonical_document_id; canonical_attack_id; direct_evidence_count; is_subtechnique; parent_attack_id; revoked; deprecated
+data/document_year_membership_all_years.csv,4504,canonical_document_id; year; primary_membership_mass; uncertain_membership_mass; membership_role
+data/document_year_weights.csv,4060,canonical_document_id; year; weight
+data/relation_universe.csv,28195,feature_index; technique_i_id; technique_j_id
+data/technique_evidence.csv,9550,candidate_id; canonical_document_id; representative_raw_document_id; sentence_id; page_number; span_start; span_end; canonical_attack_id; rule_id; pair_conflict_flag; primary_pair_eligible
+data/time_assignments.csv,14252,candidate_id; canonical_document_id; representative_raw_document_id; sentence_id; page_number; event_time_start; event_time_end; temporal_precision; rule_id; temporal_role; anchor_used; final_disposition
+data/top1_excluded_documents.csv,15,canonical_document_id; n_techniques; pair_potential; rank; percentile_rank; collection_channel; windows_assigned; primary_mass_sum; multi_event_document; first_core_year; last_core_year; windows_assigned_rank; HIGH_TECHNIQUE_COUNT; MULTI_YEAR_HIGH_SPREAD; influence_flag
+data/top5_excluded_documents.csv,74,canonical_document_id; n_techniques; pair_potential; rank; percentile_rank; collection_channel; windows_assigned; primary_mass_sum; multi_event_document; first_core_year; last_core_year; source_filename; windows_assigned_rank; HIGH_TECHNIQUE_COUNT; MULTI_YEAR_HIGH_SPREAD; influence_flag
+results/audit/final_stratified_counts.csv,9,stratum; N; n; positive; negative
+results/audit/initial_and_final_labels.csv,300,blind_id; rater1_initial; rater2_initial; final_author_record
+results/corrections/c1_support_summary_corrected.csv,20,dataset_family; scheme; direction; n; n_raw_p_lt_0_05; n_holm_p_lt_0_05; n_exact_boundary_0_05; alpha_rule
+results/corrections/c2_decision_changes_corrected.csv,196,change_id; dataset_id; model_comparison; scheme; scoring_scale_id; left_role; right_role; left_status; right_status; decision_changed
+results/corrections/c2_support_summary_corrected.csv,14,aggregation_scope; scheme; model_comparison; scenario; level; n; n_R1_LOWER_ERROR; n_R1_HIGHER_ERROR; n_NO_CLEAR_DIFFERENCE
+results/corrections/loto_rmse_direction_corrected.csv,294,dataset_id; provenance; dataset_family; scenario; replicate_id; level; model; comparison; left_condition; right_condition; common_score_scale; left_rmse; right_rmse; delta_rmse_left_minus_right; direction_tolerance; percent_change; percent_change_defined; direction_status; source_row_key
+results/corrections/loto_rmse_summary_corrected.csv,90,aggregation_scope; comparison; model; n; n_decrease; n_equal; n_increase; n_percent_defined; percent_change_mean; percent_change_min; percent_change_max; provenance; dataset_family; scenario; level
+results/corrections/mc_model_summary_corrected.csv,36,scenario; level; scope; density_multiplier; n_replicates; candidate_set_frequencies; T12_mean; T12_sd_ddof1; T12_min; T12_max; R2_boundary_frequencies
+results/corrections/mc_set_comparison_corrected.csv,180,comparison_pair; comparison_role; left_scenario; right_scenario; replicate_id; level; scope; density_multiplier; left_set; right_set; intersection; sets_equal; sets_different; sets_overlap; sets_disjoint; stored_left_matches_model_row; stored_right_matches_model_row; left_model_row_key; right_model_row_key
+results/corrections/mc_set_summary_corrected.csv,48,comparison_pair; comparison_role; scope; density_multiplier; level; n_valid; n_equal; n_different; n_overlap; n_disjoint
+results/corrections/relation_stability_summary.csv,3,scenario; comparison; expected_rows; actual_rows; cosine_valid_rows; cosine_median; union_change_valid_rows; positive_state_change_fraction_union_nonzero_median; ratio_summary_method
+results/initial/figure_05/rich_document_ranking.csv,1474,canonical_document_id; n_techniques; pair_potential; rank; percentile_rank; collection_channel; windows_assigned; primary_mass_sum; multi_event_document; first_core_year; last_core_year; windows_assigned_rank; HIGH_TECHNIQUE_COUNT; MULTI_YEAR_HIGH_SPREAD; influence_flag
+results/initial/stage15/adjusted_model_comparison.csv,3,method_id; rss; ic; parameter_count; boundaries_json; best_ic; R0_R1_practical_tie; R1_R2_practical_tie; R0_R2_practical_tie
+results/initial/stage15/composition_adjusted_descriptor_raw.csv,21,transition_id; transition_index; component_share_birth; component_share_death; component_share_increase; support_share_low; support_share_medium; rms_low; rms_medium; rms_high; persistent_relation_rms
+results/initial/v05/pair_concentration_summary.csv,15,statistic; value
+results/initial/v05/scenario_annual_graph_statistics.csv,66,scenario; year; documents; effective_mass; active_techniques; active_edges; global_relation_space_occupancy; active_node_relation_density; weighted_pair_mass
+results/initial/v05/scenario_document_statistics.csv,3,scenario; documents; removed_documents; document_year_memberships; effective_mass; unique_techniques
+results/initial/v05/scenario_model_comparison.csv,3,scenario; documents; removed_documents; removed_fraction; effective_mass; active_techniques_min; active_techniques_median; active_techniques_max; active_edges_min; active_edges_median; active_edges_max; R0_IC; R1_IC; R2_IC; best_model; R1_R2_delta_IC; R1_R2_practical_tie; R0_LOTO; R1_LOTO; R2_LOTO; T12; T12_null_p; time_given_coverage_partial_R2; time_given_coverage_p; coverage_given_time_partial_R2; coverage_given_time_p
+results/initial/v06/B2_common_node_density_statistics.csv,189,scenario; transition_id; transition_index; density_multiplier; q_B2; effective_q; common_nodes; common_possible_pairs; positive_left_before; positive_right_before; target_k_each_side; retained_edges_left; retained_edges_right; retained_edges_total; retained_relation_feature_count; common_node_identity_sha256; left_right_common_node_identity_verified; positive_excess_weight_before; retained_positive_excess_weight; retained_weight_fraction; feasible
+results/initial/v06/early_period_sensitivity.csv,3,period; start_year; end_year; transitions; S0_preferred_model_set; S2_preferred_model_set; sets_overlap; form_separation_status; S0_R0_LOTO; S0_R1_LOTO; S0_R2_LOTO; S2_R0_LOTO; S2_R1_LOTO; S2_R2_LOTO; S0_T12; S0_T12_p; S2_T12; S2_T12_p
+results/initial/v06/scenario_branch_model_comparison.csv,21,scenario; branch; density_multiplier; years; transitions; q; documents; effective_mass; median_active_nodes; median_common_nodes; median_retained_edges; retained_weight_fraction; R0_IC; R1_IC; R2_IC; best_model; preferred_model_set; R1_R2_delta_IC; R1_R2_practical_tie; R0_LOTO; R1_LOTO; R2_LOTO; T12; T12_p; time_given_coverage_partial_R2; time_given_coverage_p; coverage_given_time_partial_R2; coverage_given_time_p; model_admissible_set; T12_pseudo_sequences
+results/main/B0_L2_models.csv,15,scenario; replicate; level; input; threshold; candidates; T12; R0; R1; R2
+results/main/B2/B2_L2_models.csv,150,replicate; level; input; q_policy; q; scenario; lambda; start_year; transitions; median_common_nodes; median_budget; candidate_set; T12; R0_IC; R1_IC; R2_IC; R2_boundaries
+results/main/B2/B2_selection.csv,90,q_policy; scenario; lambda; replicate; q; median_budget; zero_transitions
+results/main/B2/selection_details.csv,1890,replicate; level; input; q_policy; q; scenario; lambda; transition; common_nodes; budget; kept_before; kept_after
+results/main/LOTO_R0_R2.csv,15,scenario; replicate; input; comparison; scheme; B; seed; mean_error_difference; low; high; contains_zero
+results/main/LOTO_primary_losses.csv,945,scenario; replicate; input; holdout; condition; score; model; mse
+results/main/contrast/baseline_0_E02_null.csv,200,pseudo_sequence; T12_null
+results/main/contrast/baseline_0_E03_null.csv,200,pseudo_sequence; T12_null
+results/main/contrast/baseline_1e-12_E02_null.csv,200,pseudo_sequence; T12_null
+results/main/contrast/baseline_1e-12_E03_null.csv,200,pseudo_sequence; T12_null
+results/main/contrast/contrast_results.csv,8,input; threshold; test; T12; candidates; count; p; null_median; R0; R1; R2
+results/main/contrast/modified_0_E02_null.csv,200,T12_null
+results/main/contrast/modified_0_E03_null.csv,200,T12_null
+results/main/contrast/modified_1e-12_E02_null.csv,200,pseudo_sequence; T12_null
+results/main/contrast/modified_1e-12_E03_null.csv,200,pseudo_sequence; T12_null
+results/main/factorial_followup_180.csv,180,scenario; replicate; level; input; threshold; candidates; T12; R0; R1; R2
+results/main/figure8_slopes.csv,45,input; replicate; descriptor; R; W; same_sign
+results/main/figure9_all_levels.csv,45,scenario; replicate; level; input; threshold; candidates; T12; R0; R1; R2
+results/main/table8_LOTO.csv,30,scenario; replicate; input; role; condition; score; comparison; scheme; B; seed; mean_error_difference; low; high; contains_zero
+results/main/table8_conditional_tests.csv,30,scenario; replicate; input; direction; scheme; B; seed; delta_RSS; partial_R2; p; p_holm_two_directions
+results/time_revision/CVE85_tracking.csv,85,candidate_id; canonical_document_id_old; representative_raw_document_id; paragraph_id; sentence_id_old; page_number; sentence_order; expression_char_start; expression_char_end; expression_type; event_time_start; event_time_end; temporal_precision; normalization_status; rule_id; anchor_used; anchor_time_start; anchor_time_end; final_disposition; canonical_document_id_new; sentence_id_new; automatic_decision; reason; v1_adopted; reviewed_decision; decision_provenance; human_role_label; final_scope
+results/time_revision/confirmed_identifier_years.csv,6,candidate_id; canonical_document_id; rule; expression; start; end; identifier; identifier_year_start; identifier_year_end
+results/time_revision/original_vs_v1_counts.csv,2,original_adopted; False; True
+results/time_revision/residual_six/annual_impact.csv,22,year; changed_W_count; max_abs_W_change; M_before; M_after
+results/time_revision/residual_six/changed_weights.csv,5,canonical_document_id; year; weight_before; weight_after; difference
+results/time_revision/residual_six/revised_time_assignments.csv,14092,candidate_id; canonical_document_id; event_time_start; event_time_end; temporal_precision
+results/time_revision/residual_six/revised_time_assignments_final_scope.csv,14076,candidate_id; canonical_document_id; event_time_start; event_time_end; temporal_precision
+results/time_revision/residual_six/revised_weights.csv,4017,canonical_document_id; year; weight
+results/time_revision/rule_dependency_links.csv,4852,canonical_document_id; canonical_attack_id; evidence; target; exclusive
+results/time_revision/six_case_overlap.csv,6,technique_i; technique_j; supporting_reports_before; reports_losing_direct_pair_support; supporting_reports_remaining
+results/time_revision/time_flow.csv,10,original_adopted; automatic_decision; reviewed_decision; count
+results/time_revision/top_report_overlap.csv,2,exclusion; reports_in_list; dependent_links; dependent_reports
+results/time_revision/v3_1/hold_both_annual.csv,22,year; M_before; M_after; changed_W_count; W_increases; W_decreases; W_disappearances; W_appearances; max_abs_W_change; max_change_pair; max_pair_W_before; max_pair_W_after
+results/time_revision/v3_1/hold_both_time_assignments.csv,14098,candidate_id; canonical_document_id; event_time_start; event_time_end; temporal_precision
+results/time_revision/v3_1/hold_both_time_assignments_final_scope.csv,14082,candidate_id; canonical_document_id; event_time_start; event_time_end; temporal_precision
+results/time_revision/v3_1/hold_both_weights.csv,4019,canonical_document_id; year; weight

@@ -1,0 +1,7 @@
+technique_i,technique_j,supporting_reports_before,reports_losing_direct_pair_support,supporting_reports_remaining
+T1056.001,T1113,25,2,23
+T1012,T1057,26,0,26
+T1012,T1027,18,0,18
+T1057,T1083,20,1,19
+T1082,T1083,20,0,20
+T1003,T1053,23,0,23

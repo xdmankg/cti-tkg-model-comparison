@@ -1,0 +1,20 @@
+{
+  "provenance": "Recalculated from released losses; not a recovered original result file.",
+  "reference_intervals_checked": 30,
+  "max_reference_error": 1.3322676295501878e-15,
+  "new_intervals": 15,
+  "intervals_including_zero": 15,
+  "seed_policy": "Reuse the R1_MINUS_R2 seed of the same scenario and replicate.",
+  "block_length": 3,
+  "bootstrap_samples": 10000,
+  "quantiles": [
+    0.025,
+    0.975
+  ],
+  "quantile_method": "linear",
+  "numpy_version": "2.3.5",
+  "input_sha256": {
+    "LOTO_primary_losses.csv": "b5c4177cb56438e1e2fc4bdae94310073b32c2c11fdcce6da1cbfc580483871a",
+    "table8_LOTO.csv": "f277ad151334777a29fe467248b312e1de4279e2570b672de56d27a122b9534a"
+  }
+}

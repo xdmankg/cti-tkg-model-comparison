@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this package, please cite the article and the package release."
+title: "cti-tkg-model-comparison: data and code for Model Comparison and Sensitivity Analysis of Changes in Attack Technique Relations in Temporal Knowledge Graphs Built from CTI Reports"
+version: "1.0"
+authors:
+  - family-names: Kim
+    given-names: HyoungJu
+    affiliation: "Institute of AI Convergence, Chosun University"
+  - family-names: Choi
+    given-names: Junho
+    affiliation: "Division of Undeclared Majors, Chosun University"
+preferred-citation:
+  type: article
+  title: "Model Comparison and Sensitivity Analysis of Changes in Attack Technique Relations in Temporal Knowledge Graphs Built from CTI Reports"
+  year: 2026
+  authors:
+    - family-names: Kim
+      given-names: HyoungJu
+    - family-names: Choi
+      given-names: Junho

@@ -1,0 +1,16 @@
+﻿statistic,value
+documents,1474.0
+pair_potential_total,66325.0
+mean,44.9966078697422
+median,0.0
+p90,15.0
+p95,95.89999999999873
+p99,842.4099999999985
+maximum,8128.0
+gini,0.968589942723759
+top_1_percent_share,0.6768186958160572
+top_5_percent_share,0.9271918582736525
+top_10_percent_share,0.97467018469657
+top_20_document_share,0.7329362985299661
+top1_documents,15.0
+top5_documents,74.0

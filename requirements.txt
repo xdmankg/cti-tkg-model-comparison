@@ -1,0 +1,1 @@
+# Standard library only; no third-party packages are required for scripts/verify.py and scripts/check_cited_paths.py.

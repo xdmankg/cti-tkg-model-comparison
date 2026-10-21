@@ -1,0 +1,89 @@
+manuscript_item,package_path,row_filter,coverage
+Sections 3.2–3.3; Table 5; Table S2,data/canonical_documents.csv; data/document_techniques.csv; data/document_year_weights.csv; data/time_assignments.csv; data/document_year_membership_all_years.csv,,Supplied files only; see README verification scope.
+Sections 3.2–3.3; S5.1–S5.4; Tables S18–S21,results/audit/initial_and_final_labels.csv; results/audit/final_stratified_counts.csv; results/audit/interval_results.json,,Supplied files only; see README verification scope.
+Sections 4.1–4.3; Figures 5–6,data/relation_universe.csv,,Supplied files only; see README verification scope.
+Figure 4,results/initial/figure_05/rich_document_ranking.csv; results/initial/v05/pair_concentration_summary.csv,,Supplied files only; see README verification scope.
+Table 6; Figure 7,results/followup/foundation/,,Supplied files only; see README verification scope.
+Table 7; Table S13,results/main/table8_conditional_tests.csv,scenario; direction; replicate,Supplied files only; see README verification scope.
+"Table 7; Table S12 (R1−R0, R1−R2)",results/main/table8_LOTO.csv,scenario; comparison; replicate,Supplied files only; see README verification scope.
+Table S12 underlying losses,results/main/LOTO_primary_losses.csv,scenario; replicate; holdout; model,Supplied files only; see README verification scope.
+Table S11 (B0 information criteria),results/main/B0_L2_models.csv,,Supplied files only; see README verification scope.
+Main-comparison R0−R2 LOTO,results/main/LOTO_R0_R2.csv; results/main/LOTO_verification.json,,Supplied files only; see README verification scope.
+Initial preserved results (Tables S8–S9),results/initial/stage15/,,Supplied files only; see README verification scope.
+Initial preserved Section 4.6 (Table S9),results/initial/v06/scenario_branch_model_comparison.csv; results/initial/v06/early_period_sensitivity.csv; results/initial/v06/B2_common_node_density_statistics.csv,,Supplied files only; see README verification scope.
+Section 4.6; Table 8; Table S17,results/main/B2/B2_L2_models.csv,,Supplied files only; see README verification scope.
+Table S16 (selection budgets),results/main/B2/selection_details.csv; results/main/B2/B2_selection.csv,q_policy; lambda; scenario; replicate; transition,Supplied files only; see README verification scope.
+Section 4.4; Table S14; Section S4.4,results/main/contrast/contrast_results.csv,,Supplied files only; see README verification scope.
+Initial preserved Figure 9; Section 4.7,results/corrections/,,Supplied files only; see README verification scope.
+Figures 8–9; Section S4.5; Table S10; Table S15,results/main/figure8_slopes.csv; results/main/factorial_followup_180.csv,,Supplied files only; see README verification scope.
+Sections S5.5–S5.7; Table S22,results/time_revision/,,Supplied files only; see README verification scope.
+Sections S2.3–S2.4; S3.1,configs/; scripts/; docs/,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,results/main/figure9_all_levels.csv,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,results/main/contrast/modified_0_E02_null.csv,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,results/main/contrast/modified_0_E03_null.csv,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,results/time_revision/time_flow.csv,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,results/time_revision/rule_dependency_links.csv,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,results/time_revision/original_vs_v1_counts.csv,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,results/time_revision/CVE85_tracking.csv,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,results/time_revision/top_report_overlap.csv,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,results/time_revision/six_case_overlap.csv,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,results/time_revision/residual_six/changed_weights.csv,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,results/time_revision/residual_six/annual_impact.csv,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,results/time_revision/residual_six/summary.json,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,results/time_revision/residual_six/revised_weights.csv,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,results/time_revision/residual_six/revised_time_assignments.csv,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,results/time_revision/confirmed_identifier_years.csv,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,results/time_revision/v3_1/hold_both_weights.csv,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,results/time_revision/v3_1/hold_both_time_assignments.csv,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,results/time_revision/v3_1/hold_both_annual.csv,,Supplied files only; see README verification scope.
+Supporting data; see file and section mapping,data/top5_excluded_documents.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,data/canonical_documents.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,data/document_techniques.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,data/technique_evidence.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,data/time_assignments.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,data/document_year_weights.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,data/document_year_membership_all_years.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/initial/figure_05/rich_document_ranking.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/initial/v05/pair_concentration_summary.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/initial/v05/scenario_model_comparison.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/initial/v05/scenario_document_statistics.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/initial/v05/scenario_annual_graph_statistics.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,data/top1_excluded_documents.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/initial/v06/scenario_branch_model_comparison.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/initial/v06/early_period_sensitivity.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/initial/v06/B2_common_node_density_statistics.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/corrections/mc_set_comparison_corrected.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/corrections/c2_support_summary_corrected.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/corrections/loto_rmse_direction_corrected.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/corrections/c2_decision_changes_corrected.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/corrections/c1_support_summary_corrected.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/corrections/loto_rmse_summary_corrected.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/corrections/mc_model_summary_corrected.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/corrections/mc_set_summary_corrected.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/corrections/relation_stability_summary.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/followup/foundation/S0_FULL_replicate_1.npz,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/followup/foundation/S1_DROP_TOP1_replicate_0.npz,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/followup/foundation/S1_DROP_TOP1_replicate_1.npz,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/followup/foundation/S0_FULL_replicate_4.npz,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/followup/foundation/S0_FULL_replicate_3.npz,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/followup/foundation/S2_DROP_TOP5_replicate_0.npz,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/followup/foundation/S2_DROP_TOP5_replicate_1.npz,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/followup/foundation/S1_DROP_TOP1_replicate_3.npz,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/followup/foundation/S0_FULL_replicate_2.npz,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/followup/foundation/S0_FULL_replicate_0.npz,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/followup/foundation/S2_DROP_TOP5_replicate_4.npz,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/followup/foundation/S2_DROP_TOP5_replicate_3.npz,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/followup/foundation/S1_DROP_TOP1_replicate_4.npz,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/followup/foundation/S1_DROP_TOP1_replicate_2.npz,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/followup/foundation/S2_DROP_TOP5_replicate_2.npz,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/initial/stage15/annual_rcd1_residual_long.parquet,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/initial/stage15/annual_null_expectation.parquet,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/initial/stage15/composition_adjusted_descriptor_raw.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/initial/stage15/adjusted_model_comparison.csv,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/initial/stage15/adjusted_R0_fit.json,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/initial/stage15/adjusted_R1_fit.json,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,results/initial/stage15/adjusted_R2_fit.json,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,configs/stage15.json,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,configs/followup_seeds.json,,Supplied files only; see README verification scope.
+Recovered initial/follow-up source; see recovery notes,configs/followup.json,,Supplied files only; see README verification scope.
+Table S12 R0−R2 LOTO,results/main/LOTO_R0_R2.csv; results/main/LOTO_verification.json,scenario; replicate,Recalculated from released losses after reference-interval validation.
