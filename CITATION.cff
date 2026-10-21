@@ -2,6 +2,8 @@ cff-version: 1.2.0
 message: "If you use this package, please cite the article and the package release."
 title: "cti-tkg-model-comparison: data and code for Model Comparison and Sensitivity Analysis of Changes in Attack Technique Relations in Temporal Knowledge Graphs Built from CTI Reports"
 version: "1.0"
+url: "https://github.com/xdmankg/cti-tkg-model-comparison"
+repository-code: "https://github.com/xdmankg/cti-tkg-model-comparison"
 authors:
   - family-names: Kim
     given-names: HyoungJu

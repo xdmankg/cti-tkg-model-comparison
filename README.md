@@ -20,7 +20,7 @@ This repository provides derived inputs, preserved numerical results, manuscript
 | `scripts/` | Numerical verification and paired LOTO interval recalculation |
 | `docs/` | File schemas, artifact index, run registry, and verification outputs |
 
-Use `docs/paper_artifacts.csv` to locate supplied files and `docs/file_schema.csv` to inspect their columns. The index lists the material supplied in this release. Its paths take precedence over historical working paths mentioned in earlier manuscript versions.
+Use `docs/paper_artifacts.csv` to locate supplied files and `docs/file_schema.csv` to inspect their columns. The index lists the material supplied in this package. It is not a claim that every historical working file named in the Supplementary Materials is distributed. Identical-byte path changes are listed in `docs/path_changes.csv`.
 
 ## Verification
 
@@ -34,7 +34,7 @@ python scripts/recalculate_loto.py
 sha256sum -c checksums.sha256
 ```
 
-`verify.py` checks reported values and arithmetic identities. `verify_recovered.py` checks derived inputs, reconstructs observed ratios from released links and weights, and checks preserved arrays. `recalculate_loto.py` first reproduces the 30 supplied R1−R0 and R1−R2 intervals, then calculates 15 R0−R2 intervals. These calculations use moving blocks of length 3, 10,000 samples, and the saved seeds. The R0−R2 outputs are recalculations from released losses, not recovered original output files.
+`verify.py` checks reported values and arithmetic identities, including all 180 candidate-set rows across 36 conditions, audit summaries, input counts, and selected table values. Any unavailable input required by an implemented check produces a nonzero exit status. `verify_recovered.py` checks derived inputs, reconstructs observed ratios from released links and weights, and checks preserved arrays. `recalculate_loto.py` first reproduces the 30 supplied R1−R0 and R1−R2 intervals, then calculates 15 R0−R2 intervals. These calculations use moving blocks of length 3, 10,000 samples, and the saved seeds. The R0−R2 outputs are recalculations from released losses, not recovered original output files.
 
 Verification reports are written under `docs/`. Generated reports and the recalculated LOTO outputs are excluded from the static checksum list so that rerunning the scripts does not invalidate it. Their source inputs are checksummed.
 
@@ -44,6 +44,7 @@ Verification reports are written under `docs/`. Generated reports and the recalc
 - Audit judgments support agreement calculations. The supplied stratum counts support weighted rates and uncertainty summaries. Sample selection, source-context reassessment, and the linkage of individual judgments to strata are outside this release's verification scope.
 - The 14,076-expression residual-six input was evaluated through report–year weights and observed ratios W. No downstream randomization, excess-ratio, or model results for that input are asserted here.
 - Original and revised time lists include pre-final-scope entries. Use the supplied final-scope views for the manuscript counts of 14,082 and 14,076. See `docs/analysis_history.md`.
+- Historical per-run files, source-text manifests, illustrative-source files, and analysis kernels not listed in the artifact index are outside this distribution. The preserved summaries and supplied recalculations have the narrower coverage stated in the index.
 - This release does not reproduce report collection, text reconstruction, evidence extraction, the full analysis pipeline, or figure rendering.
 
 ## Privacy and rights
@@ -54,4 +55,4 @@ The license files supplied with the source package are retained: MIT for author-
 
 ## Citation
 
-See `CITATION.cff`. When citing a published copy, include its actual GitHub release URL and version. No repository URL or publication identifier is assumed in this archive.
+See `CITATION.cff`. When citing a published copy, include its actual GitHub release URL and version. Repository: https://github.com/xdmankg/cti-tkg-model-comparison. Version 1.0 is the package version; use an existing release tag or commit when identifying the exact copy used.

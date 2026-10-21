@@ -2,7 +2,8 @@
 
 ## 1.0
 
-- Derived analytical inputs, preserved results, and manuscript images.
-- Explicit separation of initial, follow-up, main-comparison, audit, and time-revision results.
-- Numerical checks and paired LOTO interval recalculation from preserved losses.
-- File schemas, artifact index, run registry, checksums, and supplied license notices.
+- Derived inputs, preserved numerical results, audit summaries, and manuscript images.
+- Selected numerical verification and paired LOTO interval recalculation.
+- Four identical-byte file paths aligned with manuscript citations.
+- LF text line endings and matching checksums.
+- Python 3.10-compatible verification with all 36 cross-condition comparisons retained.

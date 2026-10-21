@@ -4,8 +4,8 @@
 
 Run from the package root:  python3 scripts/verify.py
 Standard library only. Each check prints expected value, actual value, tolerance and status.
-Checks whose source files are not yet in the package are reported as NOT_AVAILABLE, not as FAIL.
-Exit code 0 when no check fails.
+Checks cover the supplied data and selected numerical results.
+Exit code 0 only when every implemented check passes.
 """
 import csv, hashlib, statistics, sys
 from collections import Counter
@@ -180,7 +180,8 @@ def check_s14():
         check(cid + ':null_median', 'Table S14', med, float(x['null_median']), 5e-5)
         check(cid + ':count', 'Table S14', cnt, int(x['count']))
         check(cid + ':p', 'Table S14', p, float(x['p']), 5e-7)
-        null = rows(f'results/main/contrast/{inp}_{'0' if float(thr) == 0 else thr}_{test}_null.csv')
+        threshold_label = '0' if float(thr) == 0 else thr
+        null = rows(f'results/main/contrast/{inp}_{threshold_label}_{test}_null.csv')
         if null is None:
             check(cid + ':null_file_rows', 'Table S14', 200, None); continue
         vals = [float(y['T12_null']) for y in null]
@@ -190,7 +191,7 @@ def check_s14():
         check(cid + ':recomputed_median', 'Table S14', med, statistics.median(vals), 5e-5)
 
 
-# ---------------------------------------------------------------- 6. items that need files not yet released
+# ---------------------------------------------------------------- 6. Audit and additional released results
 def check_added():
     import json
     a=rows('results/audit/initial_and_final_labels.csv')
@@ -243,8 +244,148 @@ def check_added():
         check('rows:'+rel,'preserved output',n,len(rows(rel)))
 
 
+def check_audit():
+    r = rows('results/audit/initial_and_final_labels.csv')
+    if r is None:
+        for cid in ('agreement', 'kappa', 'negative_final'):
+            check(f'Audit:technique:{cid}', 'Section 3.2 / Table S20', '', None)
+            check(f'Audit:time:{cid}', 'Section 3.3 / Table S21', '', None)
+    else:
+        def kappa(s):
+            cats = sorted({x['rater1_initial'] for x in s} | {x['rater2_initial'] for x in s})
+            po = sum(x['rater1_initial'] == x['rater2_initial'] for x in s) / len(s)
+            pe = sum((sum(x['rater1_initial'] == c for x in s) / len(s)) * (sum(x['rater2_initial'] == c for x in s) / len(s)) for c in cats)
+            return po, (po - pe) / (1 - pe)
+        # blind_id prefix T = technique evidence items (200), M = time expressions (100)
+        for pref, name, n, agree, kap, neg, src in (('T', 'technique', 200, 176, 0.708, 44, 'Section 3.2 / Table S20'), ('M', 'time', 100, 95, 0.900, None, 'Section 3.3 / Table S21')):
+            s = [x for x in r if x['blind_id'].startswith(pref)]
+            check(f'Audit:{name}:n', src, n, len(s))
+            po, k = kappa(s) if s else (None, None)
+            check(f'Audit:{name}:agreement', src, agree, sum(x['rater1_initial'] == x['rater2_initial'] for x in s) if s else None)
+            check(f'Audit:{name}:kappa', src, kap, round(k, 3) if k is not None else None, 5e-4)
+            if neg is not None:
+                check(f'Audit:{name}:negative_final', src, neg, sum(x['final_author_record'] == '2' for x in s) if s else None)
+            check(f'Audit:{name}:undecidable_final', src, 0, sum(x['final_author_record'] == '3' for x in s) if s else None)
+    p = ROOT / 'results/audit/interval_results.json'
+    if not p.exists():
+        check('Audit:weighted_rates', 'Section 3.2–3.3', '76.0 / 64.1', None); return
+    import json
+    j = json.loads(p.read_text(encoding='utf-8'))
+    for key, name, est, lo, hi, src in (('A', 'technique', 76.0, 61.2, 87.2, 'Section 3.2 / Table S19'), ('C', 'time', 64.1, 35.9, 86.1, 'Section 3.3 / Table S19')):
+        g = j.get(key, {})
+        check(f'Audit:{name}:weighted_rate_pct', src, est, round(100 * g.get('weighted_estimate', float('nan')), 1), 0.05)
+        ci = g.get('conservative_95_interval', [None, None])
+        check(f'Audit:{name}:conservative_interval_low_pct', src, lo, round(100 * ci[0], 1) if ci[0] is not None else None, 0.05)
+        check(f'Audit:{name}:conservative_interval_high_pct', src, hi, round(100 * ci[1], 1) if ci[1] is not None else None, 0.05)
+    fs = rows('results/audit/final_stratified_counts.csv')
+    if fs is not None:
+        tech = [x for x in fs if x['stratum'].startswith('A:')]
+        check('Audit:technique:population_N', 'Table S18', 8622, sum(int(x['N']) for x in tech))
+        check('Audit:technique:sample_n', 'Table S18', 200, sum(int(x['n']) for x in tech))
+
+def check_inputs():
+    cd = rows('data/canonical_documents.csv')
+    if cd is None:
+        check('Inputs:canonical_documents', 'Table 5', 1856, None); return
+    final = {x['canonical_document_id'] for x in cd if x['included_in_analytical_corpus'] == 'True'}
+    check('Inputs:canonical_documents', 'Table 5', 1856, len(cd)); check('Inputs:final_reports', 'Table 5', 1474, len(final))
+    dt = rows('data/document_techniques.csv') or []
+    check('Inputs:links', 'Table 5', 4852, len(dt)); check('Inputs:technique_ids', 'Table 5', 449, len({x['canonical_attack_id'] for x in dt}))
+    check('Inputs:revoked_links', 'Table 5', 474, sum(x['revoked'] == 'True' for x in dt)); check('Inputs:deprecated_links', 'Table 5', 108, sum(x['deprecated'] == 'True' for x in dt))
+    check('Inputs:subtechnique_share_pct', 'Table 5', 39.8, round(100 * sum(x['is_subtechnique'] == 'True' for x in dt) / len(dt), 1) if dt else None, 0.05)
+    per = Counter(x['canonical_document_id'] for x in dt)
+    check('Inputs:reports_with_techniques', 'Table 5', 941, len(per)); check('Inputs:reports_with_one', 'Table 5', 353, sum(v == 1 for v in per.values())); check('Inputs:reports_with_two_or_more', 'Table 5', 588, sum(v >= 2 for v in per.values()))
+    check('Inputs:sum_combination_counts', 'Section 4.2', 66325, sum(v * (v - 1) // 2 for v in per.values()))
+    te = rows('data/technique_evidence.csv') or []
+    check('Inputs:evidence_items', 'Table 5', 9550, len(te)); check('Inputs:quarantined_items', 'Section 3.2', 313, sum(x['pair_conflict_flag'] == 'True' for x in te))
+    check('Inputs:eligible_evidence_ids', 'Table 5', 459, len({x['canonical_attack_id'] for x in te if x['primary_pair_eligible'] == 'True'}))
+    check('Inputs:eligible_links_full_scope', 'Section 4.1', 5258, len({(x['canonical_document_id'], x['canonical_attack_id']) for x in te if x['primary_pair_eligible'] == 'True'}))
+    check('Inputs:eligible_evidence_final_scope', 'Section 3.2', 8622, sum(x['canonical_document_id'] in final and x['primary_pair_eligible'] == 'True' for x in te))
+    rc = Counter(x['rule_id'] for x in te)
+    for rule, n in (('P2_DIRECT_EXACT_CANONICAL_NAME', 6900), ('P2_DIRECT_EXPLICIT_EXTERNAL_ID', 2428), ('P2_DIRECT_UNIQUE_NORMALIZED_NAME', 122), ('P2_DIRECT_UNIQUE_BEHAVIOR_LEXICON', 100)):
+        check(f'Inputs:rule:{rule}', 'Table 5', n, rc.get(rule))
+    ta = rows('data/event_time_assignments.csv')
+    check('Inputs:adopted_time_expressions', 'Table 5', 14252, len(ta) if ta is not None else None)
+    check('Inputs:adopted_time_expressions_final_scope', 'Table 5', 14236, sum(x['canonical_document_id'] in final for x in ta) if ta is not None else None)
+    w = rows('data/document_year_weights.csv')
+    check('Inputs:report_year_weights', 'Table 5', 4060, len(w) if w is not None else None)
+    check('Inputs:weight_sum_in_period', 'Table 5', 1429.197, round(sum(float(x['weight']) for x in w), 3) if w is not None else None, 0.0005)
+    if w is not None:
+        yc = Counter(min(v, 4) for v in Counter(x['canonical_document_id'] for x in w).values())
+        check('Inputs:years_per_report', 'Table 5', '446/410/252/366', f"{yc[1]}/{yc[2]}/{yc[3]}/{yc[4]}")
+    ru = rows('data/relation_universe.csv'); check('Inputs:relation_universe', 'Section 3.3', 28195, len(ru) if ru is not None else None)
+    for f, n in (('data/top1_excluded_documents.csv', 15), ('data/top5_excluded_documents.csv', 74)):
+        r = rows(f); check(f'Inputs:{f}', 'Section 4.5', n, len(r) if r is not None else None)
+    rk = rows('results/initial/figure_05/rich_document_ranking.csv')
+    if rk is None:
+        check('Figure4:ranking', 'Section S3.4', 'file present', None); return
+    v = sorted((int(x['pair_potential']) for x in rk), reverse=True); tot = sum(v); pos = [x for x in v if x > 0]
+    check('Figure4:rows', 'Section S3.4', 1474, len(v)); check('Figure4:sum', 'Section S3.4', 66325, tot); check('Figure4:positive', 'Section S3.4', 588, len(pos))
+    for k, e in ((15, 67.68), (74, 92.72), (148, 97.47)):
+        check(f'Figure4:top{k}_share_pct', 'Section S3.4', e, round(100 * sum(v[:k]) / tot, 2), 0.005)
+    for k, e in ((6, 46.87), (30, 80.24), (59, 89.85)):
+        check(f'Figure4:positive_top{k}_share_pct', 'Section S3.4', e, round(100 * sum(pos[:k]) / tot, 2), 0.005)
+    def gini(a):
+        a = sorted(a); n = len(a); return (2 * sum((i + 1) * x for i, x in enumerate(a)) / (n * sum(a))) - (n + 1) / n
+    check('Figure4:gini_all', 'Section S3.4', 0.9686, round(gini(v), 4), 0.00005); check('Figure4:gini_positive', 'Section S3.4', 0.9213, round(gini(pos), 4), 0.00005)
+
+S10 = {('baseline', '0.0', 'L0_STAGE15_MATCHED', 'S0_FULL'): {'{R1}': 3, '{R2}': 2}, ('baseline', '0.0', 'L1_EXTENDED', 'S0_FULL'): {'{R2}': 5}, ('baseline', '0.0', 'L2_HIGH', 'S0_FULL'): {'{R2}': 5},
+       ('baseline', '0.0', 'L0_STAGE15_MATCHED', 'S1_DROP_TOP1'): {'{R1}': 5}, ('baseline', '0.0', 'L1_EXTENDED', 'S1_DROP_TOP1'): {'{R1}': 5}, ('baseline', '0.0', 'L2_HIGH', 'S1_DROP_TOP1'): {'{R1}': 5},
+       ('baseline', '0.0', 'L0_STAGE15_MATCHED', 'S2_DROP_TOP5'): {'{R0}': 5}, ('baseline', '0.0', 'L1_EXTENDED', 'S2_DROP_TOP5'): {'{R0}': 5}, ('baseline', '0.0', 'L2_HIGH', 'S2_DROP_TOP5'): {'{R0,R2}': 5},
+       ('baseline', '1e-12', 'L0_STAGE15_MATCHED', 'S0_FULL'): {'{R2}': 5}, ('baseline', '1e-12', 'L1_EXTENDED', 'S0_FULL'): {'{R2}': 5}, ('baseline', '1e-12', 'L2_HIGH', 'S0_FULL'): {'{R2}': 5},
+       ('baseline', '1e-12', 'L0_STAGE15_MATCHED', 'S1_DROP_TOP1'): {'{R0}': 4, '{R1}': 1}, ('baseline', '1e-12', 'L1_EXTENDED', 'S1_DROP_TOP1'): {'{R0}': 4, '{R0,R1}': 1}, ('baseline', '1e-12', 'L2_HIGH', 'S1_DROP_TOP1'): {'{R0}': 5},
+       ('baseline', '1e-12', 'L0_STAGE15_MATCHED', 'S2_DROP_TOP5'): {'{R0}': 5}, ('baseline', '1e-12', 'L1_EXTENDED', 'S2_DROP_TOP5'): {'{R0}': 5}, ('baseline', '1e-12', 'L2_HIGH', 'S2_DROP_TOP5'): {'{R0}': 5}}
+
+def check_more_tables():
+    f = rows('results/main/factorial_followup_180.csv')
+    check('TableS10:rows', 'Table S10', 180, len(f) if f is not None else None)
+    for (i, t, l, s), e in S10.items():
+        cid = f'TableS10:{i}:{t}:{l}:{s}'
+        if f is None: check(cid, 'Table S10', str(e), None); continue
+        got = Counter(norm_set(x['candidates']) for x in f if x['input'] == i and x['threshold'] == t and x['level'] == l and x['scenario'] == s)
+        check(cid, 'Table S10', str(dict(sorted({norm_set(k): v for k, v in e.items()}.items()))), str(dict(sorted(got.items()))))
+    b0 = rows('results/main/B0_L2_models.csv')
+    for s, e in (('S0_FULL', '{R2}'), ('S1_DROP_TOP1', '{R0}'), ('S2_DROP_TOP5', '{R0}')):
+        cid = f'TableS11:{s}'
+        if b0 is None: check(cid, 'Table S11', e, None); continue
+        got = Counter(norm_set(x['candidates']) for x in b0 if x['scenario'] == s); check(cid, 'Table S11', str({e: 5}), str(dict(got)))
+    sl = rows('results/main/figure8_slopes.csv')
+    if sl is None:
+        check('TableS15:slopes', 'Figure 8 / Table S15', 'file present', None)
+    else:
+        check('TableS15:rows', 'Table S15', 45, len(sl))
+        check('TableS15:same_sign_descriptors', 'Section 4.4', 7, sum(1 for d in {x['descriptor'] for x in sl} if all(x['same_sign'] == 'True' for x in sl if x['descriptor'] == d)))
+        for d, wexp, rlo, rhi in (('component_share_death', -0.489, 0.262, 0.265), ('persistent_relation_rms', 0.527, -0.381, -0.322)):
+            ws = {round(float(x['W']), 3) for x in sl if x['descriptor'] == d}; rs = [float(x['R']) for x in sl if x['descriptor'] == d]
+            check(f'TableS15:{d}:W_slope', 'Section 4.4', wexp, ws.pop() if len(ws) == 1 else None, 0.0005)
+            check(f'TableS15:{d}:R_slope_min', 'Section 4.4', rlo, round(min(rs), 3), 0.0005); check(f'TableS15:{d}:R_slope_max', 'Section 4.4', rhi, round(max(rs), 3), 0.0005)
+    bs = rows('results/main/B2/B2_selection.csv')
+    if bs is None:
+        check('TableS16:B2_selection', 'Table S16', 'file present', None)
+    else:
+        check('TableS16:rows', 'Table S16', 90, len(bs))
+        for qp, lam, e in (('reestimated', '1.0', (83, 20, 9)), ('legacy_fixed', '1.0', (723, 174, 86))):
+            got = tuple(int(statistics.median(float(x['median_budget']) for x in bs if x['q_policy'] == qp and x['lambda'] == lam and x['scenario'] == s)) for s in SCEN)
+            check(f'TableS16:median_budget:{qp}:lambda={lam}', 'Table S16 / Section 4.6', str(e), str(got))
+    hb = rows('results/time_revision/v3_1/hold_both_time_assignments_final_scope.csv'); check('TableS22:revised_final_scope', 'Table S22', 14082, len(hb) if hb is not None else None)
+    rv = rows('results/time_revision/residual_six/revised_time_assignments_final_scope.csv'); check('TableS22:residual_six_final_scope', 'Table S22', 14076, len(rv) if rv is not None else None)
+    tf = rows('results/time_revision/time_flow.csv')
+    if tf is not None:
+        n = lambda oa, ad=None, rd=None: sum(int(x['count']) for x in tf if x['original_adopted'] == oa and (ad is None or x['automatic_decision'] == ad) and (rd is None or x['reviewed_decision'] == rd))
+        check('TableS22:original_adopted', 'Table S22', 14252, n('True')); check('TableS22:removed_in_v1', 'Section S5.5', 93, n('True', 'NOT_ADOPTED_BASELINE'))
+        check('TableS22:added_in_v1', 'Section S5.5', 40, n('False') - n('False', 'NOT_ADOPTED_BASELINE'))
+        check('TableS22:intermediate_list', 'Section S5.5', 14199, n('True') - n('True', 'NOT_ADOPTED_BASELINE') + n('False') - n('False', 'NOT_ADOPTED_BASELINE'))
+        check('TableS22:auto_retained', 'Section S5.5', 14091, n('True', 'RETAIN_BASELINE') + n('False', 'RETAIN_BASELINE'))
+        check('TableS22:auto_excluded', 'Section S5.5', 62, n('True', 'EXCLUDE') + n('False', 'EXCLUDE')); check('TableS22:review', 'Section S5.5', 46, n('True', 'REVIEW') + n('False', 'REVIEW'))
+    rd = rows('results/time_revision/rule_dependency_links.csv'); check('S5.7:rule_dependent_links', 'Section S5.7', 120, sum(x['exclusive'] == 'True' for x in rd) if rd is not None else None)
+    cv = rows('results/time_revision/CVE85_tracking.csv'); check('S5.6:CVE85_rows', 'Section S5.6', 85, len(cv) if cv is not None else None)
+    ci = rows('results/time_revision/confirmed_identifier_years.csv'); check('S5.6:confirmed_identifier_years', 'Section S5.6', 6, len(ci) if ci is not None else None)
+    cw = rows('results/time_revision/residual_six/changed_weights.csv')
+    check('S5.6:changed_weights', 'Section S5.6', 5, len(cw) if cw is not None else None); check('S5.6:reports_affected', 'Section S5.6', 2, len({x['canonical_document_id'] for x in cw}) if cw is not None else None)
+    ai = rows('results/time_revision/residual_six/annual_impact.csv'); check('S5.6:max_abs_W_change', 'Section S5.6', 0.001606585, max(float(x['max_abs_W_change']) for x in ai) if ai is not None else None, 5e-10)
+
 def main():
-    check_hashes(); check_table7(); check_loto(); check_b2(); check_s14(); check_added()
+    check_hashes(); check_table7(); check_loto(); check_b2(); check_s14(); check_added(); check_audit(); check_inputs(); check_more_tables()
     w = max(len(r[0]) for r in RESULTS)
     for cid, src, exp, act, tol, st in RESULTS:
         print(f'{st:13s} {cid:{w}s}  expected={exp!s:<40.40} actual={act!s:<40.40} tol={tol}')
@@ -254,7 +395,7 @@ def main():
     with out.open('w', encoding='utf-8', newline='') as f:
         wr = csv.writer(f); wr.writerow(['check_id', 'source', 'expected_value', 'actual_value', 'tolerance', 'status']); wr.writerows(RESULTS)
     print('written', out.relative_to(ROOT))
-    sys.exit(1 if c['FAIL'] or ('--release' in sys.argv and c['NOT_AVAILABLE']) else 0)
+    sys.exit(1 if c['FAIL'] or c['NOT_AVAILABLE'] else 0)
 
 
 if __name__ == '__main__':

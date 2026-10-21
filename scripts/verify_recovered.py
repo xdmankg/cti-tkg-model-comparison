@@ -17,7 +17,7 @@ ck('canonical_reports',len(can),1856);ck('final_reports',len(ids),1474)
 te=read('data/technique_evidence.csv');ck('mapping_evidence',len(te),9550);ck('quarantined_mapping_evidence',int(te.pair_conflict_flag.sum()),313)
 ck('eligible_final_evidence',int((te.canonical_document_id.isin(ids)&te.primary_pair_eligible).sum()),8622)
 tl=read('data/document_techniques.csv');ck('final_links',len(tl),4852);ck('techniques',tl.canonical_attack_id.nunique(),449)
-t=read('data/time_assignments.csv');ck('time_all',len(t),14252);ck('time_final',int(t.canonical_document_id.isin(ids).sum()),14236)
+t=read('data/event_time_assignments.csv');ck('time_all',len(t),14252);ck('time_final',int(t.canonical_document_id.isin(ids).sum()),14236)
 w=read('data/document_year_weights.csv');ck('weight_rows',len(w),4060);ck('weight_reports_match',set(w.canonical_document_id)==ids,True)
 # Reconstruct W from the released links and original weights and compare all 620,290 values.
 u=read('data/relation_universe.csv').sort_values('feature_index');tech=sorted(set(tl.canonical_attack_id));ti={x:i for i,x in enumerate(tech)};ds=sorted(ids);di={x:i for i,x in enumerate(ds)}
@@ -40,7 +40,7 @@ for p in files:
   ck(p.stem+':'+level+':residual',float(abs(np.maximum(0,z['observed']-z['mu_'+level])-z['residual_'+level]).max()),0,1e-14)
  base=np.load(R/('results/followup/foundation/'+p.stem.rsplit('_',1)[0]+'_0.npz'),allow_pickle=False)
  ck(p.stem+':W_same_across_bundles',float(abs(z['observed']-base['observed']).max()),0)
-a=pd.read_parquet(R/'results/initial/stage15/annual_rcd1_residual_long.parquet').sort_values(['annual_window','feature_index'])
+a=pd.read_parquet(R/'results/initial/stage15/validation_rcd1_residual_long.parquet').sort_values(['annual_window','feature_index'])
 ck('initial_W_matches_followup_W',float(abs(a.observed_wgt3.to_numpy().reshape(22,-1)-z0['observed']).max()),0)
 ck('initial_residual_identity',float(abs(np.maximum(0,a.observed_wgt3-a.null_expected_wgt3)-a.positive_excess).max()),0,1e-14)
 rm=read('results/corrections/loto_rmse_summary_corrected.csv');row=rm[(rm.aggregation_scope=='OVERALL')&(rm.comparison=='PREPROCESSING_FOLDLOCAL_MINUS_LEGACY')&(rm.model=='R2')].iloc[0]

@@ -1,0 +1,5 @@
+previous_package_path,current_package_path,relationship
+data/time_assignments.csv,data/event_time_assignments.csv,Identical bytes; path restored to manuscript citation
+results/initial/stage15/annual_rcd1_residual_long.parquet,results/initial/stage15/validation_rcd1_residual_long.parquet,Identical bytes; path restored to manuscript citation
+results/initial/v05/scenario_model_comparison.csv,results/initial/figure_09/V05_scenario_model_comparison.csv,Identical bytes; path restored to manuscript citation
+results/initial/v06/scenario_branch_model_comparison.csv,results/initial/figure_09/V06_scenario_branch_model_comparison.csv,Identical bytes; path restored to manuscript citation
